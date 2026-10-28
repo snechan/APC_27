@@ -1,27 +1,25 @@
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+s = input("Enter a string: ")
 
-    def display_person_info(self):
-        print("Name:", self.name)
-        print("Age:", self.age)
+vowels = 0
+consonants = 0
+digits = 0
+spaces = 0
+special = 0
 
+for ch in s:
+    if ch in "aeiouAEIOU":
+        vowels += 1
+    elif ch.isalpha():
+        consonants += 1
+    elif ch.isdigit():
+        digits += 1
+    elif ch == " ":
+        spaces += 1
+    else:
+        special += 1
 
-class Employee(Person):
-    def __init__(self, name, age, employee_id, salary):
-        super().__init__(name, age)
-        self.employee_id = employee_id
-        self.salary = salary
-
-    def display_employee_info(self):
-        self.display_person_info()
-        print("Employee ID:", self.employee_id)
-        print("Salary:", self.salary)
-
-
-# Create an Employee object
-emp = Employee("Sneha", 20, 101, 30000)
-
-# Display employee details
-emp.display_employee_info()
+print("Vowels =", vowels)
+print("Consonants =", consonants)
+print("Digits =", digits)
+print("Spaces =", spaces)
+print("Special characters =", special)

@@ -1,7 +1,12 @@
-def invoice(price, quantity):
-    total = price * quantity
-    discount = total * 0.10
-    gst = (total - discount) * 0.18
-    return total - discount + gst
+paragraph = input("Enter paragraph: ")
 
-print(invoice(1000, 2))
+words = paragraph.lower().split()
+freq = {}
+
+for word in words:
+    freq[word] = freq.get(word, 0) + 1
+
+print("Word Frequency:")
+
+for word, count in freq.items():
+    print(word, ":", count)

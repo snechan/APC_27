@@ -1,4 +1,10 @@
-def power(base, exponent):
-    return base ** exponent
+s = input("Enter a string: ")
+ch = input("Enter a character: ")
 
-print(power(2, 3))
+count = 0
+
+for x in s:
+    if x == ch:
+        count += 1
+
+print("Frequency:", count)

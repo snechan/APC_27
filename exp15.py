@@ -1,4 +1,9 @@
-def unique(a):
-    return list(set(a))
+s = input("Enter a string: ")
 
-print(unique([1, 2, 2, 3, 3]))
+duplicates = ""
+
+for ch in s:
+    if s.count(ch) > 1 and ch not in duplicates:
+        duplicates += ch
+
+print("Duplicate characters:", duplicates)

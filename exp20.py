@@ -1,6 +1,7 @@
-def salary(basic):
-    hra = basic * 0.20
-    da = basic * 0.10
-    return basic + hra + da
+sentence = input("Enter a sentence: ")
+word = input("Enter word: ")
 
-print(salary(10000))
+words = sentence.split()
+count = words.count(word)
+
+print("Occurrences:", count)

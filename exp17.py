@@ -1,7 +1,7 @@
-def fibonacci(n):
-    a, b = 0, 1
-    for i in range(n):
-        print(a, end=" ")
-        a, b = b, a + b
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
 
-fibonacci(7)
+if sorted(s1) == sorted(s2):
+    print("Anagram")
+else:
+    print("Not Anagram")

@@ -1,4 +1,9 @@
-def count(a, x):
-    return a.count(x)
+s = input("Enter a sentence: ")
 
-print(count([1, 2, 2, 3, 2], 2))
+words = s.split()
+result = ""
+
+for word in words:
+    result += word[0].upper() + word[1:] + " "
+
+print("Title Case:", result)

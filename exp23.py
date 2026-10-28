@@ -1,6 +1,16 @@
-def student(name, roll, marks):
-    total = sum(marks)
-    percentage = total / 5
-    print(name, roll, total, percentage)
+s = input("Enter a string: ")
 
-student("Amit", 1, [80, 70, 90, 85, 75])
+result = ""
+count = 1
+
+for i in range(len(s)):
+    if i + 1 < len(s) and s[i] == s[i + 1]:
+        count += 1
+    else:
+        result += s[i] + str(count)
+        count = 1
+
+if len(result) < len(s):
+    print("Compressed string:", result)
+else:
+    print("Original string:", s)

@@ -1,4 +1,11 @@
-def simple_interest(p, r, t):
-    return (p * r * t) / 100
+s = input("Enter a string: ")
 
-print(simple_interest(1000, 5, 2))
+reverse = ""
+
+for ch in s:
+    reverse = ch + reverse
+
+if s == reverse:
+    print("String is Palindrome")
+else:
+    print("String is Not Palindrome")

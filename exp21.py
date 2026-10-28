@@ -1,6 +1,11 @@
-def bill(price, quantity):
-    total = price * quantity
-    discount = total * 0.10
-    return total - discount
+password = input("Enter password: ")
 
-print(bill(100, 5))
+if (len(password) >= 8 and
+    any(ch.isupper() for ch in password) and
+    any(ch.islower() for ch in password) and
+    any(ch.isdigit() for ch in password) and
+    any(not ch.isalnum() for ch in password)):
+
+    print("Valid Password")
+else:
+    print("Invalid Password")

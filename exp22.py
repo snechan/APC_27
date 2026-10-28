@@ -1,7 +1,13 @@
-def calculate(a):
-    print("Minimum:", min(a))
-    print("Maximum:", max(a))
-    print("Sum:", sum(a))
-    print("Average:", sum(a) / len(a))
+s = input("Enter a string: ")
 
-calculate([10, 20, 30, 40])
+result = ""
+count = 1
+
+for i in range(len(s)):
+    if i + 1 < len(s) and s[i] == s[i + 1]:
+        count += 1
+    else:
+        result += s[i] + str(count)
+        count = 1
+
+print("Compressed string:", result)

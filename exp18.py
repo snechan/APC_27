@@ -1,14 +1,9 @@
-def result(marks):
-    p = sum(marks) / 5
-    print("Percentage:", p)
+s = input("Enter a string: ")
 
-    if p >= 75:
-        print("Grade A")
-    elif p >= 60:
-        print("Grade B")
-    elif p >= 40:
-        print("Grade C")
-    else:
-        print("Fail")
+result = ""
 
-result([80, 70, 90, 60, 85])
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print("After removing duplicates:", result)

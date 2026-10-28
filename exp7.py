@@ -1,7 +1,9 @@
-def total(n):
-    s = 0
-    for i in range(1, n + 1):
-        s += i
-    return s
+s = input("Enter a string: ")
 
-print(total(5))
+result = ""
+
+for ch in s:
+    if ch != " ":
+        result += ch
+
+print("String without spaces:", result)

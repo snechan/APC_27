@@ -1,5 +1,14 @@
-def area(r):
-    return 3.14 * r * r
+s = input("Enter a string: ")
 
-r = float(input("Enter radius: "))
-print(area(r))
+old = input("Enter character to replace: ")
+new = input("Enter new character: ")
+
+result = ""
+
+for ch in s:
+    if ch == old:
+        result += new
+    else:
+        result += ch
+
+print("New string:", result)

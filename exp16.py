@@ -1,5 +1,9 @@
-def second_largest(a):
-    a = sorted(set(a))
-    return a[-2]
+s = input("Enter a string: ")
 
-print(second_largest([10, 20, 30, 40]))
+freq = {}
+
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
+
+for ch, count in freq.items():
+    print(ch, ":", count)

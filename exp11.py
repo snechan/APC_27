@@ -1,4 +1,9 @@
-def reverse(s):
-    return s[::-1]
+s = input("Enter a sentence: ")
 
-print(reverse("hello"))
+words = s.split()
+count = 0
+
+for word in words:
+    count += 1
+
+print("Total words:", count)

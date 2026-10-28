@@ -1,4 +1,10 @@
-def average(a):
-    return sum(a) / len(a)
+s = input("Enter a sentence: ")
 
-print(average([10, 20, 30]))
+words = s.split()
+shortest = words[0]
+
+for word in words:
+    if len(word) < len(shortest):
+        shortest = word
+
+print("Shortest word:", shortest)

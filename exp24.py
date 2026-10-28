@@ -1,23 +1,11 @@
-balance = 1000
-history = []
+s = input("Enter a string: ")
 
-def deposit(amount):
-    global balance
-    balance += amount
-    history.append("Deposited")
+freq = {}
 
-def withdraw(amount):
-    global balance
-    if amount <= balance:
-        balance -= amount
-        history.append("Withdrawn")
-    else:
-        print("Insufficient balance")
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
 
-def enquiry():
-    print("Balance:", balance)
+most = max(freq, key=freq.get)
 
-deposit(500)
-withdraw(200)
-enquiry()
-print(history)
+print("Most frequent character:", most)
+print("Frequency:", freq[most])

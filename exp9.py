@@ -1,8 +1,4 @@
-def largest(a):
-    big = a[0]
-    for i in a:
-        if i > big:
-            big = i
-    return big
+s = input("Enter a string: ")
 
-print(largest([10, 25, 5, 40, 15]))
+print("First character:", s[0])
+print("Last character:", s[-1])

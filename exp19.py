@@ -1,10 +1,7 @@
-def bill(units):
-    if units <= 100:
-        amount = units * 2
-    elif units <= 200:
-        amount = 200 + (units - 100) * 3
-    else:
-        amount = 500 + (units - 200) * 5
-    return amount
+s = input("Enter main string: ")
+sub = input("Enter substring: ")
 
-print(bill(150))
+if sub in s:
+    print("Substring exists")
+else:
+    print("Substring does not exist")

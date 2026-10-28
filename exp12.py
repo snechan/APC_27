@@ -1,4 +1,10 @@
-def palindrome(s):
-    return str(s) == str(s)[::-1]
+s = input("Enter a sentence: ")
 
-print(palindrome("madam"))
+words = s.split()
+longest = words[0]
+
+for word in words:
+    if len(word) > len(longest):
+        longest = word
+
+print("Longest word:", longest)

@@ -1,4 +1,10 @@
-def hospital(consultation, lab, medicine, room):
-    return consultation + lab + medicine + room
+import re
 
-print(hospital(200, 500, 300, 1000))
+email = input("Enter email: ")
+
+pattern = r'^[\w.-]+@[\w.-]+\.\w+$'
+
+if re.match(pattern, email):
+    print("Valid Email")
+else:
+    print("Invalid Email")

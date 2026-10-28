@@ -1,10 +1,13 @@
-def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+s = input("Enter a string: ")
 
-n = int(input("Enter number: "))
-print(is_prime(n))
+upper = 0
+lower = 0
+
+for ch in s:
+    if ch.isupper():
+        upper += 1
+    elif ch.islower():
+        lower += 1
+
+print("Uppercase letters:", upper)
+print("Lowercase letters:", lower)

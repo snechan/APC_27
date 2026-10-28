@@ -1,24 +1,19 @@
-books = {"Python": "Available", "Java": "Available"}
+s = input("Enter a string: ")
 
-def add_book(name):
-    books[name] = "Available"
+freq = {}
 
-def issue_book(name):
-    if name in books and books[name] == "Available":
-        books[name] = "Issued"
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
 
-def return_book(name):
-    if name in books:
-        books[name] = "Available"
+values = sorted(freq.values(), reverse=True)
 
-def search_book(name):
-    print(books.get(name, "Not found"))
+if len(values) < 2:
+    print("Second most frequent character does not exist")
+else:
+    second = values[1]
 
-def display():
-    print(books)
-
-add_book("C")
-issue_book("Python")
-return_book("Python")
-search_book("Java")
-display()
+    for ch, count in freq.items():
+        if count == second:
+            print("Second most frequent character:", ch)
+            print("Frequency:", count)
+            break
