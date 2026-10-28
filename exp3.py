@@ -1,2 +1,7 @@
-even = lambda x: x % 2 == 0
-print(even(4))
+n=int(input("enter no"))
+if n>=0:
+ print("the number is positive")
+else:
+ print("the number is negative")
+
+ 

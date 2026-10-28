@@ -1,2 +1,11 @@
-a = [1, 2, 3, 4]
-print(list(map(lambda x: x * x, a)))
+a=int(input("enter no a"))
+b=int(input("enter no b"))
+c=int(input("enter no c"))
+if a>b and a>c:
+ print("a is largest ")
+elif b>c and b>c:
+  print("b is largest ")
+else:
+ print("c is largest")
+
+

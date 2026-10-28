@@ -1,3 +1,7 @@
-a = [1, 2, 3]
-b = [4, 5, 6]
-print(list(map(lambda x, y: x + y, a, b)))
+n=int(input("enter no"))
+if n%2==0:
+ print("the number is even")
+else:
+ print("the number is odd")
+
+ 
