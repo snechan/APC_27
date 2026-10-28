@@ -1,10 +1,5 @@
-s = input("Enter a string: ")
-ch = input("Enter a character: ")
-
-count = 0
-
-for x in s:
-    if x == ch:
-        count += 1
-
-print("Frequency:", count)
+f = open("student.txt", "r")
+lines = f.readlines()
+for line in reversed(lines):
+    print(line.strip())
+f.close()

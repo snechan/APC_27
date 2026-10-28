@@ -1,13 +1,10 @@
-s = input("Enter a string: ")
+with open("file1.txt", "r") as f1:
+    text1 = f1.read()
 
-result = ""
-count = 1
+with open("file2.txt", "r") as f2:
+    text2 = f2.read()
 
-for i in range(len(s)):
-    if i + 1 < len(s) and s[i] == s[i + 1]:
-        count += 1
-    else:
-        result += s[i] + str(count)
-        count = 1
+with open("combined.txt", "w") as f3:
+    f3.write(text1 + "\n" + text2)
 
-print("Compressed string:", result)
+print("Files combined successfully.")

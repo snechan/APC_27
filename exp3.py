@@ -1,6 +1,5 @@
-num=int(input("enter the number"))
-i=0
-while i<=num:
- if i%2!=0:
-  print(i)
- i+=1
+f = open("student.txt", "a")
+f.write("College: D.Y. Patil College of Engineering and Technology\n")
+f.write("City: Kolhapur\n")
+f.close()
+print("Information appended successfully.")

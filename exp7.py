@@ -1,5 +1,5 @@
-num=int(input("enter the number"))
-i=num
-while i >=1:
- print(i)
- i-=1
+f = open("student.txt", "r")
+data = f.read()
+words = data.split()
+print("Total number of words:", len(words))
+f.close()

@@ -1,9 +1,9 @@
-s = input("Enter a string: ")
+f = open("student.txt", "r")
+text = f.read()
+f.close()
 
-freq = {}
+f = open("uppercase.txt", "w")
+f.write(text.upper())
+f.close()
 
-for ch in s:
-    freq[ch] = freq.get(ch, 0) + 1
-
-for ch, count in freq.items():
-    print(ch, ":", count)
+print("Uppercase file created.")

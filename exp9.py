@@ -1,7 +1,13 @@
-num = int(input("Enter number: "))
-i = 1
-fact = 1
-while i <= num:
-    fact = fact * i
-    i = i + 1
-print("Factorial =", fact)
+f = open("student.txt", "r")
+data = f.read().lower()
+vowels = 0
+consonants = 0
+for ch in data:
+    if ch.isalpha():
+        if ch in "aeiou":
+            vowels += 1
+        else:
+            consonants += 1
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+f.close()

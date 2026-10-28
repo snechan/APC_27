@@ -1,5 +1,7 @@
-num=int(input("enter the number"))
-i=0
-while i<=num:
- print(i)
- i+=1
+f = open("student.txt", "w")
+f.write("Name: Anjali Mattikalli\n")
+f.write("Roll No: 50\n")
+f.write("Branch: Computer Science and Engineering\n")
+f.write("Semester: 5\n")
+f.close()
+print("Student details written successfully.")

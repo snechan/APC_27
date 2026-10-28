@@ -1,9 +1,11 @@
-s = input("Enter a string: ")
+source = open("program.py", "r")
+output = open("without_comments.py", "w")
 
-duplicates = ""
+for line in source:
+    if not line.lstrip().startswith("#"):
+        output.write(line)
 
-for ch in s:
-    if s.count(ch) > 1 and ch not in duplicates:
-        duplicates += ch
+source.close()
+output.close()
 
-print("Duplicate characters:", duplicates)
+print("Comments removed successfully.")

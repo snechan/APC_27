@@ -1,9 +1,14 @@
-s = input("Enter a sentence: ")
+old_word = input("Enter word to replace: ")
+new_word = input("Enter new word: ")
 
-words = s.split()
-result = ""
+f = open("student.txt", "r")
+text = f.read()
+f.close()
 
-for word in words:
-    result += word[0].upper() + word[1:] + " "
+text = text.replace(old_word, new_word)
 
-print("Title Case:", result)
+f = open("student.txt", "w")
+f.write(text)
+f.close()
+
+print("Word replaced successfully.")

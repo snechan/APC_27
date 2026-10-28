@@ -1,9 +1,12 @@
-s = input("Enter a sentence: ")
+f = open("student.txt", "r")
+text = f.read()
+f.close()
 
-words = s.split()
-count = 0
+words = text.split()
 
-for word in words:
-    count += 1
-
-print("Total words:", count)
+if words:
+    longest = max(words, key=len)
+    print("Longest word:", longest)
+    print("Length:", len(longest))
+else:
+    print("File is empty.")

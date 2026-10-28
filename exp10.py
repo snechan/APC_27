@@ -1,11 +1,21 @@
-num = int(input("Enter number: "))
-i = 2
-count = 0
-while i < num:
-    if num % i == 0:
-        count = count + 1
-    i = i + 1
-if num > 1 and count == 0:
-    print("Prime number")
-else:
-    print("Not a prime number")
+f = open("student.txt", "r")
+data = f.read()
+alphabets = 0
+digits = 0
+spaces = 0
+special = 0
+for ch in data:
+    if ch.isalpha():
+        alphabets += 1
+    elif ch.isdigit():
+        digits += 1
+    elif ch.isspace():
+        spaces += 1
+    else:
+        special += 1
+nprint("Alphabets:", alphabets)
+print("Digits:", digits)
+print("Spaces:", spaces)
+print("Special characters:", special)
+
+f.close()

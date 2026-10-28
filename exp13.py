@@ -1,10 +1,18 @@
-s = input("Enter a sentence: ")
+word = input("Enter word to search: ").lower()
 
-words = s.split()
-shortest = words[0]
+f = open("student.txt", "r")
+count = 0
 
-for word in words:
-    if len(word) < len(shortest):
-        shortest = word
+for line_no, line in enumerate(f, start=1):
+    words = line.lower().split()
+    occurrences = sum(
+        1 for w in words
+        if w.strip(".,!?;:") == word
+    )
 
-print("Shortest word:", shortest)
+    if occurrences > 0:
+        print("Line number:", line_no)
+        count += occurrences
+
+f.close()
+print("Total occurrences:", count)

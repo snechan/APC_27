@@ -1,6 +1,4 @@
-num=int(input("enter the number"))
-i=0
-while i<=num:
- if i%2==0:
-  print(i)
- i+=1
+f = open("student.txt", "r")
+data = f.read()
+print(data)
+f.close()
