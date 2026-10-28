@@ -1,14 +1,6 @@
-old_word = input("Enter word to replace: ")
-new_word = input("Enter new word: ")
+numbers = [10, 20, 10, 49,30, 20, 40,79, 30, 50]
 
-f = open("student.txt", "r")
-text = f.read()
-f.close()
+num = list(set(numbers))
 
-text = text.replace(old_word, new_word)
-
-f = open("student.txt", "w")
-f.write(text)
-f.close()
-
-print("Word replaced successfully.")
+print("Original list:", numbers)
+print("Unique elements:", num)

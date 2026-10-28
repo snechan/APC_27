@@ -1,11 +1,3 @@
-source = open("program.py", "r")
-output = open("without_comments.py", "w")
-
-for line in source:
-    if not line.lstrip().startswith("#"):
-        output.write(line)
-
-source.close()
-output.close()
-
-print("Comments removed successfully.")
+numbers = [134, 223, 34, 434, 54, 654, 754, 854, 95, 10]
+numbers.sort()
+print("second largest:",numbers[-2])

@@ -1,5 +1,3 @@
-f = open("student.txt", "a")
-f.write("College: D.Y. Patil College of Engineering and Technology\n")
-f.write("City: Kolhapur\n")
-f.close()
-print("Information appended successfully.")
+color=["red","green","pink","yellow"]
+color[2]="black"
+print("update list:",color)

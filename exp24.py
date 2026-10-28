@@ -1,11 +1,6 @@
-s = input("Enter a string: ")
+# 24. Rotate a list left by one position and right by one position.
 
-freq = {}
+a = [1, 2, 3, 4, 5]
 
-for ch in s:
-    freq[ch] = freq.get(ch, 0) + 1
-
-most = max(freq, key=freq.get)
-
-print("Most frequent character:", most)
-print("Frequency:", freq[most])
+print("Left:", a[1:] + a[:1])
+print("Right:", a[-1:] + a[:-1])

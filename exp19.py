@@ -1,19 +1,9 @@
-students = [
-    ("Amit", 70, 100),
-    ("Priya", 90, 100),
-    ("Rahul", 60, 80)
-]
+# 19. Store names of students present in class. Display total students, search student, add student and remove an absent student.
 
-with open("attendance.txt", "w") as f:
-    for name, present, total in students:
-        f.write(f"{name},{present},{total}\n")
-
-with open("attendance.txt", "r") as f:
-    for line in f:
-        name, present, total = line.strip().split(",")
-        percentage = int(present) / int(total) * 100
-
-        print(name, "Attendance:", percentage, "%")
-
-        if percentage < 75:
-            print(name, "has attendance below 75%.")
+students = ["Pranjali", "Prabha", "Sneha"]
+print("Total students:", len(students))
+name = input("Search student: ")
+print(name in students)
+students.append("Anjali")
+students.remove("Sneha")
+print("Students:", students)

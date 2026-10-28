@@ -1,10 +1,7 @@
-with open("file1.txt", "r") as f1:
-    text1 = f1.read()
+# 22. Find common elements between two lists.
 
-with open("file2.txt", "r") as f2:
-    text2 = f2.read()
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
 
-with open("combined.txt", "w") as f3:
-    f3.write(text1 + "\n" + text2)
-
-print("Files combined successfully.")
+common = [x for x in a if x in b]
+print(common)

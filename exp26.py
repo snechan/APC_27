@@ -1,22 +1,14 @@
-def caesar(text, shift):
-    result = ""
+# 26. Store marks of 20 students and find highest, lowest, average, above-average and below-average students.
 
-    for ch in text:
-        if ch.isupper():
-            result += chr((ord(ch) - 65 + shift) % 26 + 65)
-        elif ch.islower():
-            result += chr((ord(ch) - 97 + shift) % 26 + 97)
-        else:
-            result += ch
+marks = []
 
-    return result
+for i in range(20):
+    marks.append(int(input("Enter marks: ")))
 
+avg = sum(marks) / 20
 
-text = input("Enter message: ")
-shift = int(input("Enter shift: "))
-
-encrypted = caesar(text, shift)
-decrypted = caesar(encrypted, -shift)
-
-print("Encrypted:", encrypted)
-print("Decrypted:", decrypted)
+print("Highest:", max(marks))
+print("Lowest:", min(marks))
+print("Average:", avg)
+print("Above average:", sum(x > avg for x in marks))
+print("Below average:", sum(x < avg for x in marks))

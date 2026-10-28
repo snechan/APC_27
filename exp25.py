@@ -1,19 +1,10 @@
-s = input("Enter a string: ")
+# 25. Remove all duplicate elements while preserving original order.
 
-freq = {}
+a = [1, 2, 2, 3, 1, 4, 3]
+b = []
 
-for ch in s:
-    freq[ch] = freq.get(ch, 0) + 1
+for x in a:
+    if x not in b:
+        b.append(x)
 
-values = sorted(freq.values(), reverse=True)
-
-if len(values) < 2:
-    print("Second most frequent character does not exist")
-else:
-    second = values[1]
-
-    for ch, count in freq.items():
-        if count == second:
-            print("Second most frequent character:", ch)
-            print("Frequency:", count)
-            break
+print(b)

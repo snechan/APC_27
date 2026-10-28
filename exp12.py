@@ -1,14 +1,2 @@
-f = open("student.txt", "r")
-text = f.read().lower()
-f.close()
-
-words = text.split()
-frequency = {}
-
-for word in words:
-    word = word.strip(".,!?;:")
-    if word:
-        frequency[word] = frequency.get(word, 0) + 1
-
-print("Word frequency:")
-print(frequency)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("element present at even index:",numbers[::2])

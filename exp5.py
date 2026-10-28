@@ -1,4 +1,5 @@
-f = open("student.txt", "r")
-lines = f.readlines()
-print("Total number of lines:", len(lines))
-f.close()
+student=["Sneha","Nisha","Manasi","Pranjali","Prabha","Anjali"]
+student.pop(0)
+student.pop()
+student.remove("Nisha")
+print("update list:",student)

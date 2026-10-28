@@ -1,18 +1,7 @@
-word = input("Enter word to search: ").lower()
+numbers = [134, 223, 34, 434, 54, 654, 754, 854, 95, 10]
+numbers.sort()
+print("Ascending order:",numbers)
+numbers.reverse()
+print("Descending order:",numbers)
 
-f = open("student.txt", "r")
-count = 0
 
-for line_no, line in enumerate(f, start=1):
-    words = line.lower().split()
-    occurrences = sum(
-        1 for w in words
-        if w.strip(".,!?;:") == word
-    )
-
-    if occurrences > 0:
-        print("Line number:", line_no)
-        count += occurrences
-
-f.close()
-print("Total occurrences:", count)

@@ -1,9 +1,8 @@
-f = open("student.txt", "r")
-text = f.read()
-f.close()
+list=[
+    ["Sneha",27,89],
+    ["Nisha",22,90],
+    ["Manasi",20,91]
+]
+print(list)
 
-f = open("uppercase.txt", "w")
-f.write(text.upper())
-f.close()
-
-print("Uppercase file created.")
+ 
