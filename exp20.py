@@ -1,5 +1,6 @@
-words = ["apple", "banana", "cat", "orange"]
+def salary(basic):
+    hra = basic * 0.20
+    da = basic * 0.10
+    return basic + hra + da
 
-print(list(map(lambda x: len(x), words)))
-print(list(filter(lambda x: len(x) > 5, words)))
-print(sorted(words, key=lambda x: len(x)))
+print(salary(10000))

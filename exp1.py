@@ -1,7 +1,8 @@
-n=int(input("enter no"))
-if n==0:
- print("the number is zero")
-else:
- print("the number is non-zero")
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
 
- 
+n = int(input("Enter number: "))
+print(factorial(n))

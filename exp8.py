@@ -1,7 +1,4 @@
-n=int(input("enter no"))
-if n%2==0:
- print("the number is even")
-else:
- print("the number is odd")
+def power(base, exponent):
+    return base ** exponent
 
- 
+print(power(2, 3))

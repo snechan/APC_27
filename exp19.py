@@ -1,6 +1,10 @@
-products = [("Pen", 20, 10), ("Bag", 1500, 2)]
+def bill(units):
+    if units <= 100:
+        amount = units * 2
+    elif units <= 200:
+        amount = 200 + (units - 100) * 3
+    else:
+        amount = 500 + (units - 200) * 5
+    return amount
 
-total = list(map(lambda x: (x[0], x[1] * x[2]), products))
-print(total)
-print(list(filter(lambda x: x[1] > 1000, total)))
-print(sorted(total, key=lambda x: x[1]))
+print(bill(150))

@@ -1,11 +1,5 @@
-a=int(input("enter no a"))
-b=int(input("enter no b"))
-c=int(input("enter no c"))
-if a>b and a>c:
- print("a is largest ")
-elif b>c and b>c:
-  print("b is largest ")
-else:
- print("c is largest")
+def area(r):
+    return 3.14 * r * r
 
-
+r = float(input("Enter radius: "))
+print(area(r))

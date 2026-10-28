@@ -1,7 +1,7 @@
-n=int(input("enter no"))
-if n>=0:
- print("the number is positive")
-else:
- print("the number is negative")
+def greater(a, b):
+    if a > b:
+        return a
+    else:
+        return b
 
- 
+print(greater(10, 20))
