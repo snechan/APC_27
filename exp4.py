@@ -1,11 +1,7 @@
-s = input("Enter a string: ")
-
-reverse = ""
-
-for ch in s:
-    reverse = ch + reverse
-
-if s == reverse:
-    print("String is Palindrome")
-else:
-    print("String is Not Palindrome")
+num=int(input("enter the number"))
+i=1
+sum=0
+while i<=num:
+ sum=sum + i
+ i+=1
+print(sum)

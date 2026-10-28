@@ -1,13 +1,8 @@
-s = input("Enter a string: ")
-
-upper = 0
-lower = 0
-
-for ch in s:
-    if ch.isupper():
-        upper += 1
-    elif ch.islower():
-        lower += 1
-
-print("Uppercase letters:", upper)
-print("Lowercase letters:", lower)
+num=int(input("enter the number"))
+i=1
+sum=0
+while i<=num:
+ if i%2!=0:
+   sum=sum + i
+ i+=1
+print(sum)

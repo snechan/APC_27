@@ -1,8 +1,6 @@
-s = input("Enter a string: ")
-
-reverse = ""
-
-for ch in s:
-    reverse = ch + reverse
-
-print("Reverse string:", reverse)
+num=int(input("enter the number"))
+i=0
+while i<=num:
+ if i%2!=0:
+  print(i)
+ i+=1

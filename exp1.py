@@ -1,9 +1,5 @@
-
-
-str = input("Enter a string: ")
-
-count = 0
-for char in str:
-    count += 1
-
-print("Length of the string :", count)
+num=int(input("enter the number"))
+i=0
+while i<=num:
+ print(i)
+ i+=1
