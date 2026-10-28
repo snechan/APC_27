@@ -1,8 +1,14 @@
-cities = ["Bediv","Pune", "Mumbai", "Delhi", "Kolhapur"]
+# Q9. Write a PYTHON program to produce following design.
+# A
+# A B
+# A B C
+# A B C D
+# A B C D E
+# If user enters n value as 5.
 
-city = input("Enter city name: ")
+n = int(input("Enter n: "))
 
-if city in cities:
-    print("City exists")
-else:
-    print("City does not exist ")
+for i in range(1, n + 1):
+    for j in range(i):
+        print(chr(65 + j), end=" ")
+    print()

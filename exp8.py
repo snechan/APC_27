@@ -1,10 +1,11 @@
-list=[3,4,54,2,45,56,2,21,43,57,79,1,6,8,89,9,34,1]
-even=0
-odd=0
-for i in list:
- if i%2==0:
-   even=even+1
- else:
-   odd=odd+1
-print("even",even)
-print("odd",odd) 
+# Q8. Write a PYTHON program to produce following design.
+# A B C
+# A B C
+# A B C
+
+n = int(input("Enter n: "))
+
+for i in range(n):
+    for j in range(3):
+        print(chr(65 + j), end=" ")
+    print()

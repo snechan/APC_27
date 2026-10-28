@@ -1,3 +1,6 @@
-color=["red","green","pink","yellow"]
-color[2]="black"
-print("update list:",color)
+# Q3. Write a PYTHON program to print odd numbers up to n.
+
+n = int(input("Enter n: "))
+
+for i in range(1, n + 1, 2):
+    print(i)
